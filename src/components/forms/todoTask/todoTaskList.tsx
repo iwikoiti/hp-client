@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { routePaths } from "../../../lib/path";
-import CreateTaskElement, { CreateElementProps } from "./createTaskElement";
+import TodoTaskElement, { TodoElementProps } from "./todoTaskElement";
 
-export default function CreateTaskForm() {
+export default function TodoTaskList() {
   const navigate = useNavigate();
 
-  const testData: CreateElementProps[] = [
+  const testData: TodoElementProps[] = [
     {
       number: "1.",
       description: "Погулять с собакой",
@@ -19,7 +19,7 @@ export default function CreateTaskForm() {
     <div>
       <div className="grid gap-y-2">
         {testData.map((card, index) => (
-          <CreateTaskElement key={index} {...card} />
+          <TodoTaskElement key={index} {...card} />
         ))}
       </div>
 
@@ -28,7 +28,7 @@ export default function CreateTaskForm() {
         onClick={() => navigate(routePaths.allTasks)}
         className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
       >
-        Опубликовать
+        Принять
       </button>
     </div>
   );

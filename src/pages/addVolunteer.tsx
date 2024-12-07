@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { routePaths } from "../lib/path";
 import VolunteerForm from "../components/forms/volunteerForm";
 
 export const AddVolunteer = () => {
@@ -11,7 +10,7 @@ export const AddVolunteer = () => {
       <VolunteerForm />
       <button
         type="button"
-        onClick={() => navigate(routePaths.home)}
+        onClick={() => navigate(-1)}
         className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
       >
         Назад
