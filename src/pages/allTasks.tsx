@@ -10,7 +10,7 @@ export const AllTasks = () => {
       <button
         type="button"
         onClick={() => navigate(routePaths.home)}
-        className="bg-yellow-300 text-black px-2 py-1 rounded-md"
+        className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
       >
         Назад
       </button>

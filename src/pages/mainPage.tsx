@@ -11,35 +11,35 @@ export const MainPage = () => {
         <button
           type="button"
           onClick={() => navigate(routePaths.allTasks)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md"
+          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
         >
           Все задачи
         </button>
         <button
           type="button"
           onClick={() => navigate(routePaths.createTasks)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md"
+          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
         >
           Создать задачу
         </button>
         <button
           type="button"
           onClick={() => navigate(routePaths.task)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md"
+          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
         >
           Задача
         </button>
         <button
           type="button"
           onClick={() => navigate(routePaths.verification)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md"
+          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
         >
           Код
         </button>
         <button
           type="button"
           onClick={() => navigate(routePaths.addVolunteer)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md"
+          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
         >
           Добавить волонтера
         </button>
