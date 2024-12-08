@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       type={type}
       onClick={handleClick}
-      className={`bg-yellow-300 text-black px-2 py-1 rounded-md my-2 ${className}`}
+      className={`bg-custom-button-bg text-black px-2 py-1 rounded-md my-2 ${className}`}
     >
       {children}
     </button>

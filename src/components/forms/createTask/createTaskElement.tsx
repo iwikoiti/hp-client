@@ -1,3 +1,5 @@
+import Input from "../../ui/Input";
+
 export interface CreateElementProps {
   number: string;
   description: string;
@@ -12,13 +14,13 @@ export default function CreateTaskElement(
         <label className="text-base leading-6 mr-2" htmlFor="task">
           {createElementProps.number}
         </label>
-        <input
-          className="text-base leading-6 mr-2"
+        <Input
+          // className="text-base leading-6 mr-2"
           id="task"
           placeholder="Введите задачу..."
         >
           {/* {createElementProps.description} */}
-        </input>
+        </Input>
       </div>
     </>
   );

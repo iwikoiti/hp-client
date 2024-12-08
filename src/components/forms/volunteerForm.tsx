@@ -3,6 +3,7 @@ import { InputsContainer } from "../ui/inputsContainer";
 import { routePaths } from "../../lib/path";
 import { useNavigate } from "react-router-dom";
 import Button from "../ui/Button";
+import Input from "../ui/Input";
 
 interface volunteerInput {
   name: string;
@@ -25,24 +26,23 @@ export default function VolunteerForm() {
   return (
     <>
       <form>
-        <InputsContainer>
+        <InputsContainer className="flex flex-col gap-y-2">
           <Controller
             name="name"
             control={control}
             rules={{ required: ". Поле обязательно для заполнения" }}
             render={({ field }) => (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col">
                 <label htmlFor="name" className="">
                   Имя
                 </label>
-                <input
+                <Input
                   id="name"
                   {...field}
                   type="text"
                   autoComplete="off"
                   placeholder="Введите имя..."
-                  className="border border-black"
-                ></input>
+                ></Input>
               </div>
             )}
           ></Controller>
@@ -52,18 +52,17 @@ export default function VolunteerForm() {
             control={control}
             rules={{ required: ". Поле обязательно для заполнения" }}
             render={({ field }) => (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col">
                 <label htmlFor="surname" className="">
                   Фамилия
                 </label>
-                <input
+                <Input
                   id="surname"
                   {...field}
                   type="text"
                   autoComplete="off"
                   placeholder="Введите фамилию..."
-                  className="border border-black"
-                ></input>
+                ></Input>
               </div>
             )}
           ></Controller>
@@ -73,18 +72,17 @@ export default function VolunteerForm() {
             control={control}
             rules={{ required: ". Поле обязательно для заполнения" }}
             render={({ field }) => (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col">
                 <label htmlFor="fathername" className="">
                   Отчество
                 </label>
-                <input
+                <Input
                   id="fathername"
                   {...field}
                   type="text"
                   autoComplete="off"
                   placeholder="Введите отчество..."
-                  className="border border-black"
-                ></input>
+                ></Input>
               </div>
             )}
           ></Controller>
@@ -94,18 +92,17 @@ export default function VolunteerForm() {
             control={control}
             rules={{ required: ". Поле обязательно для заполнения" }}
             render={({ field }) => (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col">
                 <label htmlFor="phone" className="">
                   Номер телефона
                 </label>
-                <input
+                <Input
                   id="phone"
                   {...field}
                   type="text"
                   autoComplete="off"
                   placeholder="Введите номер телефона..."
-                  className="border border-black"
-                ></input>
+                ></Input>
               </div>
             )}
           ></Controller>

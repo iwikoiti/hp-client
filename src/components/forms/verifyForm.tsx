@@ -3,6 +3,7 @@ import { InputsContainer } from "../ui/inputsContainer";
 import { routePaths } from "../../lib/path";
 import { useNavigate } from "react-router-dom";
 import Button from "../ui/Button";
+import Input from "../ui/Input";
 
 interface codeInput {
   code: string;
@@ -29,14 +30,13 @@ export default function VerifyForm() {
                 <label htmlFor="code" className="">
                   Код
                 </label>
-                <input
+                <Input
                   id="code"
                   {...field}
                   type="text"
                   autoComplete="off"
                   placeholder="Введите код..."
-                  className="border border-black"
-                ></input>
+                ></Input>
               </div>
             )}
           ></Controller>
