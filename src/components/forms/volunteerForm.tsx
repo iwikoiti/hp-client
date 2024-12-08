@@ -2,6 +2,7 @@ import { Controller, useForm } from "react-hook-form";
 import { InputsContainer } from "../ui/inputsContainer";
 import { routePaths } from "../../lib/path";
 import { useNavigate } from "react-router-dom";
+import Button from "../ui/Button";
 
 interface volunteerInput {
   name: string;
@@ -109,13 +110,7 @@ export default function VolunteerForm() {
             )}
           ></Controller>
         </InputsContainer>
-        <button
-          type="button"
-          onClick={() => navigate(routePaths.task)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
-        >
-          Принять
-        </button>
+        <Button onClick={() => navigate(routePaths.task)}>Принять</Button>
       </form>
     </>
   );

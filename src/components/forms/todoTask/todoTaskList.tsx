@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { routePaths } from "../../../lib/path";
 import TodoTaskElement, { TodoElementProps } from "./todoTaskElement";
+import Button from "../../ui/Button";
 
 export default function TodoTaskList() {
   const navigate = useNavigate();
@@ -23,13 +24,7 @@ export default function TodoTaskList() {
         ))}
       </div>
 
-      <button
-        type="button"
-        onClick={() => navigate(routePaths.allTasks)}
-        className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
-      >
-        Принять
-      </button>
+      <Button onClick={() => navigate(routePaths.allTasks)}>Принять</Button>
     </div>
   );
 }

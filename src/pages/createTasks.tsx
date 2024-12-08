@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import CreateTaskForm from "../components/forms/createTask/createTaskForm";
+import Button from "../components/ui/Button";
 
 export const CreateTasks = () => {
   const navigate = useNavigate();
@@ -8,13 +9,7 @@ export const CreateTasks = () => {
     <div>
       <p className="text-2xl text-red-600">Создание задач</p>
       <CreateTaskForm />
-      <button
-        type="button"
-        onClick={() => navigate(-1)}
-        className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
-      >
-        Назад
-      </button>
+      <Button onClick={() => navigate(-1)}>Назад</Button>
     </div>
   );
 };

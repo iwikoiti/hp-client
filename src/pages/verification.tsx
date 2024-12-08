@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import VerifyForm from "../components/forms/verifyForm";
+import Button from "../components/ui/Button";
 
 export const Verification = () => {
   const navigate = useNavigate();
@@ -8,13 +9,7 @@ export const Verification = () => {
     <div>
       <p className="text-2xl text-red-600">Код</p>
       <VerifyForm />
-      <button
-        type="button"
-        onClick={() => navigate(-1)}
-        className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
-      >
-        Назад
-      </button>
+      <Button onClick={() => navigate(-1)}>Назад</Button>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { Controller, useForm } from "react-hook-form";
 import { InputsContainer } from "../ui/inputsContainer";
 import { routePaths } from "../../lib/path";
 import { useNavigate } from "react-router-dom";
+import Button from "../ui/Button";
 
 interface codeInput {
   code: string;
@@ -40,13 +41,9 @@ export default function VerifyForm() {
             )}
           ></Controller>
         </InputsContainer>
-        <button
-          type="button"
-          onClick={() => navigate(routePaths.createTasks)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
-        >
+        <Button onClick={() => navigate(routePaths.createTasks)}>
           Принять
-        </button>
+        </Button>
       </form>
     </>
   );

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { routePaths } from "../lib/path";
+import Button from "../components/ui/Button";
 
 export const MainPage = () => {
   const navigate = useNavigate();
@@ -8,41 +9,17 @@ export const MainPage = () => {
     <div>
       <p className="text-2xl text-red-600">Главная</p>
       <div className="flex gap-2">
-        <button
-          type="button"
-          onClick={() => navigate(routePaths.allTasks)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
-        >
+        <Button onClick={() => navigate(routePaths.allTasks)}>
           Все задачи
-        </button>
-        <button
-          type="button"
-          onClick={() => navigate(routePaths.createTasks)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
-        >
+        </Button>
+        <Button onClick={() => navigate(routePaths.createTasks)}>
           Создать задачу
-        </button>
-        <button
-          type="button"
-          onClick={() => navigate(routePaths.task)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
-        >
-          Задача
-        </button>
-        <button
-          type="button"
-          onClick={() => navigate(routePaths.verification)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
-        >
-          Код
-        </button>
-        <button
-          type="button"
-          onClick={() => navigate(routePaths.addVolunteer)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
-        >
+        </Button>
+        <Button onClick={() => navigate(routePaths.task)}>Задача</Button>
+        <Button onClick={() => navigate(routePaths.verification)}>Код</Button>
+        <Button onClick={() => navigate(routePaths.addVolunteer)}>
           Добавить волонтера
-        </button>
+        </Button>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { routePaths } from "../../../lib/path";
+import Button from "../../ui/Button";
 
 export interface CardProps {
   title: string;
@@ -14,13 +15,12 @@ export default function TaskCard(cardProps: CardProps) {
       <div className="border rounded-md p-4">
         <p className="text-xl leading-6 mb-2">{cardProps.title}</p>
         <p className="text-base leading-6 mb-4">{cardProps.description}</p>
-        <button
-          type="button"
+        <Button
           onClick={() => navigate(routePaths.addVolunteer)}
-          className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2 w-full"
+          className="w-full"
         >
           Взять
-        </button>
+        </Button>
       </div>
     </>
   );

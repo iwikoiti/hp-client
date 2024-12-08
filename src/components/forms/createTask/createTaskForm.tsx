@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { routePaths } from "../../../lib/path";
 import CreateTaskElement, { CreateElementProps } from "./createTaskElement";
+import Button from "../../ui/Button";
 
 export default function CreateTaskForm() {
   const navigate = useNavigate();
@@ -23,13 +24,9 @@ export default function CreateTaskForm() {
         ))}
       </div>
 
-      <button
-        type="button"
-        onClick={() => navigate(routePaths.allTasks)}
-        className="bg-yellow-300 text-black px-2 py-1 rounded-md my-2"
-      >
+      <Button onClick={() => navigate(routePaths.allTasks)}>
         Опубликовать
-      </button>
+      </Button>
     </div>
   );
 }
