@@ -8,18 +8,26 @@ import { routePaths } from "./path";
 
 type RoutePropsData = {
   protected: boolean;
-  routes: { path: string; Component: React.FC }[];
+  routes: { path: string; Component: React.FC; title: string }[];
 };
 
 const unprotectedRoutes: RoutePropsData = {
   protected: false,
   routes: [
-    { path: routePaths.home, Component: MainPage },
-    { path: routePaths.allTasks, Component: AllTasks },
-    { path: routePaths.createTasks, Component: CreateTasks },
-    { path: routePaths.task, Component: Task },
-    { path: routePaths.addVolunteer, Component: AddVolunteer },
-    { path: routePaths.verification, Component: Verification },
+    { path: routePaths.home, Component: MainPage, title: "Главная" },
+    { path: routePaths.allTasks, Component: AllTasks, title: "Задачи" },
+    {
+      path: routePaths.createTasks,
+      Component: CreateTasks,
+      title: "Создание задачи",
+    },
+    { path: routePaths.task, Component: Task, title: "Задача" },
+    {
+      path: routePaths.addVolunteer,
+      Component: AddVolunteer,
+      title: "Ваши данные",
+    },
+    { path: routePaths.verification, Component: Verification, title: "Код" },
   ],
 };
 

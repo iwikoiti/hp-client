@@ -7,7 +7,7 @@ export default function Router() {
   return (
     <Routes>
       {unprotectedRoutes.routes.map((route, index) => (
-        <Route element={<BaseLayout />}>
+        <Route element={<BaseLayout title={route.title} />}>
           <Route
             key={index}
             path={route.path}
