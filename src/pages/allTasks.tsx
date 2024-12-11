@@ -13,7 +13,7 @@ export const AllTasks = () => {
         <TasksList />
         <Button
           onClick={() => navigate(routePaths.verification)}
-          className="fixed bottom-4 right-4 !p-4 rounded-full shadow-lg"
+          className="fixed bottom-4 right-4 !p-4 !rounded-full shadow-lg"
         >
           <Plus />
         </Button>
